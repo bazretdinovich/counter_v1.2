@@ -3,12 +3,18 @@ import S from './Button.module.css'
 
 type Props = {
     callback: () => void
-    name: string
+    title: string
+    disabled?: boolean
 }
-export const Button = ({callback, name}: Props) => {
+
+
+export const Button = ({callback, title, disabled}: Props) => {
+
+
+
     return (
         <>
-            <button className={S.button} onClick={callback}>{name}</button>
+            <button disabled={!!disabled} className={S.button} onClick={callback}>{title}</button>
         </>
     );
 };

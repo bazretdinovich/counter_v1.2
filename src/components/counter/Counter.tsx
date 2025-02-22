@@ -2,11 +2,11 @@ import S from './Counter.module.css'
 
 type Props = {
     count: number
-    max: boolean
+    maxValue: number
 }
-export const Counter = ({count, max}: Props) => {
+export const Counter = ({count, maxValue}: Props) => {
     return (
-        <span className={S.counter} style={max ? {color: 'red'} : {color: ''}}>
+        <span className={S.counter} style={count >= maxValue ? {color: 'red'} : {color: ''}}>
             {count}
         </span>
     );

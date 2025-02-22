@@ -24,3 +24,7 @@ label {
     font-size: 30px;
 
 }
+.error {
+    background-color: rgba(206, 124, 124, 0.83);
+    border-color: red;
+}

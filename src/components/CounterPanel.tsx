@@ -7,18 +7,19 @@ type Props = {
     inc: () => void,
     reset: () => void,
     goToSettings: () => void
+    maxValueGl: number
 }
 
-export const CounterPanel = ({count, inc, reset, goToSettings}: Props) => {
+export const CounterPanel = ({count, inc, reset, goToSettings, maxValueGl}: Props) => {
     return (
         <>
             <Wrapper className='display'>
-                <Counter count={count} max={false}/>
+                <Counter count={count} maxValue={maxValueGl}/>
             </Wrapper>
             <Wrapper className='button'>
-                <Button callback={inc} name='inc'/>
-                <Button callback={reset} name='reset'/>
-                <Button callback={goToSettings} name='set'/>
+                <Button callback={inc} title='inc' disabled={count >= maxValueGl}/>
+                <Button callback={reset} title='reset'/>
+                <Button callback={goToSettings} title='set'/>
             </Wrapper>
         </>
     );

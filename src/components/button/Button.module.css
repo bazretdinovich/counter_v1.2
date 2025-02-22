@@ -8,13 +8,21 @@
     color: #414141;
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 36px;
 
     cursor: pointer;
 
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.96);
 }
 
-.button:active {
+.button:enabled:active {
     box-shadow: none;
+    background-color: #414141;
+    color: #50dbe8;
+}
+
+.button:disabled {
+    cursor: default;
+    box-shadow: none;
+    background-color: rgba(80, 219, 232, .5);
 }
