@@ -1,0 +1,20 @@
+.button {
+    min-width: 100px;
+    height: 60px;
+    background-color: #50dbe8;
+    border: none;
+    border-radius: 5px;
+
+    color: #414141;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+
+    cursor: pointer;
+
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.96);
+}
+
+.button:active {
+    box-shadow: none;
+}
