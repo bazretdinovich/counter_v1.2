@@ -31,7 +31,6 @@ function App() {
         return valueStartValueGl ? JSON.parse(valueStartValueGl) : 0
     })
 
-
     useEffect(() => {
         localStorage.setItem('count', JSON.stringify(count))
     }, [count]);
@@ -44,7 +43,6 @@ function App() {
     useEffect(() => {
         localStorage.setItem('maxValueGl', JSON.stringify(maxValueGl))
     }, [maxValueGl]);
-
 
     function inc ()  {
         if (maxValueGl > startValueGl && (maxValueGl > -1 && startValueGl > -1)) {
