@@ -7,7 +7,6 @@ type Props = {
     set: (maxValue: number, startValue: number) => void
     maxValueGl: number
     startValueGl: number
-    count: number
 }
 export const SettingsPanel = ({set, maxValueGl, startValueGl}: Props) => {
 
